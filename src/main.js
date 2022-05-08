@@ -1,21 +1,12 @@
 function palindrom(str) {
     for (let i = 0, j = str.length - 1; i < j; i++, j--) {
-        if(str[i] != str[j])
-            return false;
+        if (str[i] != str[j]) return false;
     }
     return true;
 }
-let str = prompt('Введите слово палиндром:');
+const str = prompt('Введите слово палиндром:');
 alert(palindrom(str));
 
-
-function min(a, b) {
-    return a < b ? a : b;
-}
-
-function max(a, y) {
-    return a < y ? y : a;
-}
 
 
 function replaceZero(number) {
@@ -27,3 +18,6 @@ function replaceZero(number) {
 }
 
 console.log([12, 53, 20, 18, 22, 100, 43, 53, 50].map(replaceZero).join(', '));
+
+const b = 5;
+console.log(b);

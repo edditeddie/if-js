@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write **/*.js ",
-    "lint": "eslint --debug  src/",
-    "lint:write": "eslint --debug src/ --fix"
+    "prettier": "prettier --write src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js",
+    "lint:write": "eslint --debug src/ --fix",
+    "prepare": "husky install",
+    "lint:check": "npm run prettier && npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edditeddie/if-js.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -20,15 +22,8 @@
   },
   "homepage": "https://github.com/edditeddie/if-js#readme",
   "devDependencies": {
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
+    "husky": "^7.0.4",
     "prettier": "2.6.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "dependencies": {
-    "husky": "^7.0.4"
   }
 }
