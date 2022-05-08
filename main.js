@@ -1,37 +1,29 @@
-let user = 'John Doe';
-console.log(user);
-
-let student = 'Eduard';
-console.log(student);
-
-user = student; // Eduard
-
-let test = 1;
-test = test + 1;
-test += '1'; // 21;
-console.log(test);
-test -= 1; // 20;
-console.log(test); // true
-console.log(Boolean(test));
-
-let result = 1;
-let arr = [2, 3, 5, 8];
-for (let i = 0; i < arr.length; i++) {
-  result *= arr[i];
+function palindrom(str) {
+    for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+        if(str[i] != str[j])
+            return false;
+    }
+    return true;
 }
-console.log(result);
+let str = prompt('Введите слово палиндром:');
+alert(palindrom(str));
 
-let arrOdd = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < arrOdd.length; i++) {
-  if (arrOdd[i] > 5 && arrOdd[i] < 10) {
-    console.log(arrOdd[i]);
-  }
+
+function min(a, b) {
+    return a < b ? a : b;
 }
 
-let arrEven = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < arrEven.length; i++) {
-  if (arrEven[i] % 2 === 0) {
-    console.log(arrEven[i]);
-  }
+function max(a, y) {
+    return a < y ? y : a;
 }
 
+
+function replaceZero(number) {
+    const numStr = `${number}`;
+    if (numStr.includes('0')) {
+        return `${number}`.replaceAll('0', 'zero');
+    }
+    return number;
+}
+
+console.log([12, 53, 20, 18, 22, 100, 43, 53, 50].map(replaceZero).join(', '));
