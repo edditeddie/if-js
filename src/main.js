@@ -10,19 +10,29 @@ alert(palindrom(str));
 function min(a, b) {
     return a < b ? a : b;
 }
-alert(min());
+console.log(min(1, 7));
 
 function max(a, y) {
     return a < y ? y : a;
 }
-alert(max());
+console.log(max(2, 6));
 
-function replaceZero(number) {
-    const numStr = `${number}`;
-    if (numStr.includes('0')) {
-        return `${number}`.replaceAll('0', 'zero');
-    }
-    return number;
+function getRandomInt() {
+    return Math.ceil(Math.random() * 100);
 }
 
-console.log([12, 53, 20, 18, 22, 100, 43, 53, 50].map(replaceZero).join(', '));
+const arr = [];
+for (let i = 0; i <= 9; i++) {
+    arr[i] = getRandomInt();
+}
+
+function replaceToZero() {
+    for (let i = 0; i <= 9; i++) {
+        if (arr[i].toString().includes('0')) {
+            arr[i] = arr[i].toString().replaceAll('0', 'zero');
+        }
+    }
+}
+console.log(arr);
+replaceToZero();
+console.log(arr);
