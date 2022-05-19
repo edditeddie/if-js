@@ -41,19 +41,14 @@ const data = [
     },
 ];
 
-function searcher (str) {
+function searcher(str) {
     const newArr = [];
-    data.forEach(curr => {
+    data.forEach((curr) => {
         newArr.push(`${curr.country}, ${curr.city}, ${curr.hotel}`);
-    })
-    const resArr = newArr.filter(el => {
+    });
+    const resArr = newArr.filter((el) => {
         return el.includes(str);
-    })
+    });
     return resArr.join('; ');
 }
-console.log(searcher('Rus'))
-
-
-
-
-
+console.log(searcher('Rus'));
