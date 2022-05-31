@@ -156,18 +156,17 @@ const hotels = [
     },
 ];
 
-function sortCountry () {
+function sortCountry() {
     const checkCountry = new Map();
-    for (let i = 0; i < hotels.length; i++){
+    for (let i = 0; i < hotels.length; i++) {
         if (checkCountry.has(hotels[i].country)) {
-            checkCountry.get(hotels[i].country).push(hotels[i].city)
-        }
-        else {
+            checkCountry.get(hotels[i].country).push(hotels[i].city);
+        } else {
             checkCountry.set(hotels[i].country, [hotels[i].city]);
         }
     }
     for (const entry of checkCountry) {
-       console.log(entry)
+        console.log(entry);
     }
 }
-sortCountry()
+sortCountry();
