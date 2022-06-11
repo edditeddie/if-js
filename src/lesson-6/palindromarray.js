@@ -1,4 +1,4 @@
-function palindrom(str) {
+export function palindrom(str) {
     return str == str.split('').reverse().join('');
 }
 const str = prompt('Введите слово палиндром:');
