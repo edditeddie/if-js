@@ -22,7 +22,7 @@ const studentsData = [
         lastName: 'Петров',
         admissionYear: 2019,
         courseName: 'Android',
-    }
+    },
 ];
 
 export class User {
@@ -31,7 +31,7 @@ export class User {
         this.lastName = params.lastName;
     }
     get fullName() {
-        return this.firstName + " " + this.lastName;
+        return this.firstName + ' ' + this.lastName;
     }
 }
 
@@ -42,7 +42,7 @@ class Student extends User {
         this.courseName = params.courseName;
     }
     get course() {
-        return 2022-this.admissionYear;
+        return 2022 - this.admissionYear;
     }
 }
 
@@ -50,16 +50,17 @@ class Students {
     constructor(studentsData) {
         this.studentsData = studentsData;
     }
-    getInfo () {
-        const studentsArr = this.studentsData.sort((a, b) => b.course - a.course);
+    getInfo() {
+        const studentsArr = this.studentsData.sort((a, b) => b.admissionYear - a.admissionYear);
         const formatedCourse = studentsArr.map((item) => {
             const currentStudent = new Student(item);
-            return (`${currentStudent.fullName} - ${item.courseName}, ${currentStudent.course} ${"курс"}`)
-        })
-        return formatedCourse
+            return `${currentStudent.fullName} - ${item.courseName}, ${
+                currentStudent.course
+            } ${'курс'}`;
+        });
+        return formatedCourse;
     }
 }
 
 const students = new Students(studentsData);
 console.log(students.getInfo());
-
