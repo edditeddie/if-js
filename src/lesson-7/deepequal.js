@@ -42,8 +42,12 @@ function deepEqual(obj1, obj2) {
         return false;
     }
 
-    if (typeof obj1 === 'object' && typeof obj2 === 'object' &&
-        !(obj1 instanceof Array) && !(obj2 instanceof Array)) {
+    if (
+        typeof obj1 === 'object' &&
+        typeof obj2 === 'object' &&
+        !(obj1 instanceof Array) &&
+        !(obj2 instanceof Array)
+    ) {
         if (Object.keys(obj1).length !== Object.keys(obj2).length) {
             return false;
         }
@@ -63,6 +67,6 @@ function deepEqual(obj1, obj2) {
     return false;
 }
 
-console.log(deepEqual(obj1, obj2));// true
-console.log(deepEqual(obj1, obj3));// false
-console.log(deepEqual(obj2, obj3));// false
+console.log(deepEqual(obj1, obj2)); // true
+console.log(deepEqual(obj1, obj3)); // false
+console.log(deepEqual(obj2, obj3)); // false
