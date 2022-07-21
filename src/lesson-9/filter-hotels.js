@@ -109,4 +109,5 @@ btnAdd.addEventListener('click', () => {
 
 btnDelete.addEventListener('click', () => {
     document.getElementById('child-container').classList.remove('child-container-on');
+    
 });
