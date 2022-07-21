@@ -108,14 +108,5 @@ btnAdd.addEventListener('click', () => {
 });
 
 btnDelete.addEventListener('click', () => {
-    const allChildren = document.querySelectorAll('.child-select').length;
-
-    if (allChildren > 0) {
-        allChildren[allChildren.length - 1].remove();
-    }
-
-    if (allChildren.length === 1) {
-        /*childrenWrap.style.display = 'none';*/
-        document.getElementById('child-container').classList.remove('child-container-on');
-    }
+    document.getElementById('child-container').classList.remove('child-container-on');
 });
