@@ -4,7 +4,9 @@ const url = 'https://fe-student-api.herokuapp.com/api/hotels/popular';
 async function fetchData() {
     const response = await fetch(url);
     const data = await response.json();
-    const cards = data.map(card => `<div class="homes-guests__rectangle">
+    const cards = data
+        .map(
+            (card) => `<div class="homes-guests__rectangle">
                 <img
                         class="homes-guests__image"
                         src=${card.imageUrl}
@@ -16,7 +18,9 @@ async function fetchData() {
                 <div class="homes-guests__subtitle-caption">
                 </div>
                 <svg class="homes-guests__button-arrow2"></svg>
-            </div>`).join();
+            </div>`
+        )
+        .join();
     parent.insertAdjacentHTML('afterbegin', cards);
 }
 
