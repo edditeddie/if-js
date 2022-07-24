@@ -93,29 +93,46 @@ const countsRooms = document.querySelectorAll('.button-rectangle3');
 countsRooms.forEach(countFuncRooms);
 
 const btnAdd = document.getElementById('add-child');
-/*const childrenWrap = document.querySelector('.child-container');*/
 const btnDelete = document.getElementById('delete-child');
-const childSelect = document.querySelector('.child-select');
+const childSelect = document.querySelectorAll('.child-select');
+const child = `<select class="child" name="Years Old Child">
+                            <option value="1">1 years old</option>
+                            <option value="2">2 years old</option>
+                            <option value="3">3 years old</option>
+                            <option value="4">4 years old</option>
+                            <option value="5">5 years old</option>
+                            <option value="6">6 years old</option>
+                            <option value="7">7 years old</option>
+                            <option value="8">8 years old</option>
+                            <option value="9">9 years old</option>
+                            <option value="10">10 years old</option>
+                            <option value="11">11 years old</option>
+                            <option value="12">12 years old</option>
+                            <option value="13">13 years old</option>
+                            <option value="14">14 years old</option>
+                            <option value="15">15 years old</option>
+                            <option value="16">16 years old</option>
+                            <option value="17">17 years old</option>
+                        </select>`;
 
 btnAdd.addEventListener('click', () => {
-    const allChildren = childSelect.length;
-
+    const allChildren = document.querySelectorAll('.child').length;
+    console.log('oke');
     if (allChildren === +btnAdd.dataset.max) {
         return;
     }
-    /*childrenWrap.style.display = 'flex';*/
     document.getElementById('child-container').classList.add('child-container-on');
+    childSelect.insertAdjacentHTML('afterbegin', child);
 });
 
 btnDelete.addEventListener('click', () => {
-    const allChildren = document.querySelectorAll('.child-select').length;
+    const allChildren = document.querySelectorAll('.child').length;
 
     if (allChildren > 0) {
         allChildren[allChildren.length - 1].remove();
     }
 
     if (allChildren.length === 1) {
-        /*childrenWrap.style.display = 'none';*/
         document.getElementById('child-container').classList.remove('child-container-on');
     }
 });

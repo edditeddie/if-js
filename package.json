@@ -6,7 +6,7 @@
   "scripts": {
     "prettier": "prettier --write src/**/*.js && prettier --write tests/**/*.js",
     "test": "jest",
-    "lint": "eslint src/**/*.js && eslint tests/**/*.js",
+    "lint": "eslint src/**/*.js && eslint tests/**/*.js && eslint index.html",
     "lint:write": "eslint --debug src/ --fix",
     "prepare": "husky install",
     "lint:check": "prettier --write src/**/*.js && eslint --debug src/ --fix && jest"
