@@ -80,6 +80,7 @@ function countFuncRooms(count) {
         } else {
             return fieldValue3;
         }
+
     });
 
     btnMinus3.addEventListener('click', function () {
@@ -96,7 +97,6 @@ const countsRooms = document.querySelectorAll('.button-rectangle3');
 countsRooms.forEach(countFuncRooms);
 
 const btnAdd = document.getElementById('add-child');
-/*const childrenWrap = document.querySelector('.child-container');*/
 const btnDelete = document.getElementById('delete-child');
 const childSelect = document.querySelector('.child-select');
 
@@ -111,6 +111,5 @@ btnAdd.addEventListener('click', () => {
 });
 
 btnDelete.addEventListener('click', () => {
-
     document.getElementById('child-container').classList.remove('child-container-on');
 });

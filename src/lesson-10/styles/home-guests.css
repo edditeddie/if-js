@@ -1,0 +1,318 @@
+@import url("../../../styles/fonts.css");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.homes-guests{
+  display: block;
+  padding: 120px 0 0;
+  background-color:#EAF0F9;
+}
+
+.homes-guests__heading{
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17em;
+  text-align: center;
+  color: #383838;
+}
+
+.homes-guests__wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 105px 100px 70px;
+}
+
+.homes-guests__rectangle{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 295px;
+  min-height: 435px;
+  margin: 0 4px 50px;
+}
+
+.homes-guests__subtitle-link{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.17em;
+  color: #3077C6;
+  margin-top: 24px;
+}
+
+.homes-guests__subtitle-caption {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.17em;
+  color: #BFBFBF;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.homes-guests__button-arrow2 {
+  display: none;
+  position: absolute;
+  bottom: 54%;
+  left: 86%;
+  width: 36px;
+  height: 36px;
+  background: url("src/lesson-10/image/button-arrow-mobile.svg") 0 0;
+}
+
+.homes-guests__button-arrow4{
+  display: block;
+  position: absolute;
+  bottom: 60%;
+  left: 91%;
+  width: 48px;
+  height: 48px;
+  background: url("src/lesson-10/image/button-arrow.svg") 0 0;
+}
+
+
+@media only screen and (max-width: 1232px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .homes-guests__rectangle {
+    margin: 0 0 70px;
+  }
+
+  .homes-guests__wrapper {
+    padding: 105px 70px 50px;
+  }
+
+  .homes-guests__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homes-guests__button-arrow2, .homes-guests__button-arrow4 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  .homes-guests {
+    padding: 40px;
+  }
+
+  .homes-guests__heading {
+    font-size: 34px;
+  }
+
+  .destinations__tab-button {
+    width: 33%;
+  }
+
+  .destinations__tab-button:last-child {
+    width: 33%;
+  }
+
+  .homes-guests__wrapper {
+    padding: 32px 0 0;
+  }
+
+  .homes-guests__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homes-guests__rectangle {
+    margin: 0;
+  }
+
+  .homes-guests__subtitle-link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.17em;
+    color: #3077C6;
+    margin-top: 12px;
+  }
+
+  .homes-guests__subtitle-caption {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.17em;
+    color: #BFBFBF;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .homes-guests__button-arrow {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  /* For mobile phones: */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .homes-guests {
+    padding: 40px 0;
+  }
+
+  .homes-guests__container {
+    display: flex;
+    justify-content: center;
+    width: 155px;
+  }
+
+  .homes-container-none {
+    display: none;
+  }
+
+  .homes-guests__heading {
+    font-size: 28px;
+  }
+
+  .homes-guests__wrapper {
+    padding: 32px 17px 0;
+    margin: 0;
+  }
+
+  .homes-guests__rectangle {
+    width: 155px;
+    min-height: 155px;
+    margin: 0 0;
+  }
+
+  .homes-guests__subtitle-link {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17em;
+    color: #3077C6;
+    margin-top: 8px;
+    width: 155px;
+  }
+
+  .homes-guests__subtitle-caption {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17em;
+    color: #BFBFBF;
+    margin-top: 8px;
+    width: 155px;
+  }
+
+  .homes-guests__button-arrow2 {
+    display: block;
+    position: absolute;
+    bottom: 54%;
+    left: 86%;
+    width: 36px;
+    height: 36px;
+    background: url("src/lesson-10/image/button-arrow-mobile.svg") 0 0;
+  }
+}
+
