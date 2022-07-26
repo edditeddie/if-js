@@ -59,8 +59,9 @@ const dataHotels = [
 
 const parent = document.querySelector('.homes-guests__wrapper');
 
-const hotelItems = dataHotels.map(
-    (item) => `
+const hotelItems = dataHotels
+    .map(
+        (item) => `
 <div class ="col-md-6 col-lg-12 col-6 homes-guests__container">
     <div class ="homes-guests__rectangle">
         <img class ="homes-guests__image" src=${item.imageUrl} alt=${item.name} />
@@ -68,6 +69,7 @@ const hotelItems = dataHotels.map(
         <div class ="homes-guests__subtitle-caption">${item.city}, ${item.country}</div>
     </div>
 </div>`
-).join('');
+    )
+    .join('');
 
 parent.insertAdjacentHTML('afterbegin', hotelItems);

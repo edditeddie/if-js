@@ -80,7 +80,6 @@ function countFuncRooms(count) {
         } else {
             return fieldValue3;
         }
-
     });
 
     btnMinus3.addEventListener('click', function () {
