@@ -54,9 +54,7 @@ class Students {
         const studentsArr = this.studentsData.sort((a, b) => b.admissionYear - a.admissionYear);
         const formatedCourse = studentsArr.map((item) => {
             const currentStudent = new Student(item);
-            return `${currentStudent.fullName} - ${item.courseName}, ${
-                currentStudent.course
-            } ${'курс'}`;
+            return `${currentStudent.fullName} - ${item.courseName}, ${currentStudent.course} ${'курс'}`;
         });
         return formatedCourse;
     }
