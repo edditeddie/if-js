@@ -42,12 +42,7 @@ function deepEqual(obj1, obj2) {
         return false;
     }
 
-    if (
-        typeof obj1 === 'object' &&
-        typeof obj2 === 'object' &&
-        !(obj1 instanceof Array) &&
-        !(obj2 instanceof Array)
-    ) {
+    if (typeof obj1 === 'object' && typeof obj2 === 'object' && !(obj1 instanceof Array) && !(obj2 instanceof Array)) {
         if (Object.keys(obj1).length !== Object.keys(obj2).length) {
             return false;
         }
