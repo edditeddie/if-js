@@ -2,11 +2,10 @@ const searchHotel = document.getElementById('open-search-form');
 
 const parent = document.querySelector('.homes-guests__wrapper');
 
-searchHotel.addEventListener('submit', event => fetchData(event));
-
+searchHotel.addEventListener('submit', (event) => fetchData(event));
 
 async function fetchData(event) {
-    event.preventDefault()
+    event.preventDefault();
     const countryName = document.getElementById('name-hotel').value;
     const response = await fetch('https://fe-student-api.herokuapp.com/api/hotels?search=' + countryName);
     const data = await response.json();
