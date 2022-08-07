@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Trip House</title>
         <link rel="stylesheet" href="src/lesson-11/styles/top-section.css" />
@@ -101,44 +104,51 @@
                     <form action="/" method="post" id="open-search-form">
                         <div class="row--form">
                             <div class="input--place--wrap">
-                                <label>
-                                    <input type="text" name="place" class="col--place col-md-12 col-lg-12 col-12" required />
-                                </label>
+                                <input
+                                    id="name-hotel"
+                                    type="text"
+                                    name="place"
+                                    class="col--place col-md-12 col-lg-12 col-12"
+                                    required
+                                />
                                 <label class="label--place">Your destination or hotel name</label>
                             </div>
 
                             <div class="input--date--wrap">
                                 <div class="label--date--wrap-first">
-                                    <label>
-                                        <input
-                                            type="text"
-                                            onfocus="(this.type='date')"
-                                            onblur="(this.type='text')"
-                                            class="col--date col-md-12 col-lg-12 col-12"
-                                            required
-                                        />
-                                    </label>
+                                    <input
+                                        type="text"
+                                        onfocus="(this.type='date')"
+                                        onblur="(this.type='text')"
+                                        class="col--date col-md-12 col-lg-12 col-12"
+                                    />
                                     <label class="label--date--first">Check-in</label>
                                 </div>
                                 <div class="label--date--wrap-second">
-                                    <label>
-                                        <input
-                                            type="text"
-                                            onfocus="(this.type='date')"
-                                            onblur="(this.type='text')"
-                                            class="col--date col-md-12 col-lg-12 col-12"
-                                            required
-                                        />
-                                    </label>
+                                    <input
+                                        type="text"
+                                        onfocus="(this.type='date')"
+                                        onblur="(this.type='text')"
+                                        class="col--date col-md-12 col-lg-12 col-12"
+                                    />
                                     <label class="label--date--second">Check-out</label>
                                 </div>
                             </div>
 
-                            <label for="guests"></label
-                            ><input type="text" id="guests" name="guests" class="col--guests col-md-12 col-lg-12 col-12" required />
-                            <label class="label--guests" id="label-guests">2 Adults &#8212; 0 Children &#8212; 1 Room</label>
+                            <label for="guests"></label>
+                            <input
+                                type="text"
+                                id="guests"
+                                name="guests"
+                                class="col--guests col-md-12 col-lg-12 col-12"
+                            />
+                            <label class="label--guests" id="label-guests"
+                                >2 Adults &#8212; 0 Children &#8212; 1 Room</label
+                            >
 
-                            <button class="col--button button__text col-md-12 col-md-12 col-12">Search</button>
+                            <button type="submit" class="col--button button__text col-md-12 col-md-12 col-12" id="btn-search-hotel" >
+                                Search
+                            </button>
                         </div>
 
                         <div class="filter" id="filter">
@@ -152,47 +162,78 @@
                                 <div class="filter-calculate">
                                     <div class="button-rectangle">
                                         <button class="js-minus-adults minus-plus-button" type="button">-</button>
-                                        <input type="number" class="filter-value-1 filter-value" name="number" value="1" disabled />
+                                        <input
+                                            type="number"
+                                            class="filter-value-1 filter-value"
+                                            name="number"
+                                            value="1"
+                                            disabled
+                                        />
                                         <button class="js-plus-adults minus-plus-button" type="button">+</button>
                                     </div>
 
                                     <div class="button-rectangle2">
-                                        <button class="js-minus-child minus-plus-button" id="delete-child" type="button">-</button>
-                                        <input type="number" class="filter-value-2 filter-value" name="number" value="0" disabled />
-                                        <button class="js-plus-child minus-plus-button" id="add-child" data-max="10" type="button">
+                                        <button
+                                            class="js-minus-child minus-plus-button"
+                                            id="delete-child"
+                                            type="button"
+                                        >
+                                            -
+                                        </button>
+                                        <input
+                                            type="number"
+                                            class="filter-value-2 filter-value"
+                                            name="number"
+                                            value="0"
+                                            disabled
+                                        />
+                                        <button
+                                            class="js-plus-child minus-plus-button"
+                                            id="add-child"
+                                            data-max="10"
+                                            type="button"
+                                        >
                                             +
                                         </button>
                                     </div>
 
                                     <div class="button-rectangle3">
                                         <button class="js-minus-rooms minus-plus-button" type="button">-</button>
-                                        <input type="number" class="filter-value-3 filter-value" name="number" value="1" disabled />
+                                        <input
+                                            type="number"
+                                            class="filter-value-3 filter-value"
+                                            name="number"
+                                            value="1"
+                                            disabled
+                                        />
                                         <button class="js-plus-rooms minus-plus-button" type="button">+</button>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="child-container" id="child-container">
-                                <p class="filter-text child-text" id="child-text">What is the age of the child you’re travelling with?</p>
+                                <p class="filter-text child-text" id="child-text">
+                                    What is the age of the child you’re travelling with?
+                                </p>
                                 <select class="child-select" name="Years Old Child">
-                                        <option value="1">1 years old</option>
-                                        <option value="2">2 years old</option>
-                                        <option value="3">3 years old</option>
-                                        <option value="4">4 years old</option>
-                                        <option value="5">5 years old</option>
-                                        <option value="6">6 years old</option>
-                                        <option value="7">7 years old</option>
-                                        <option value="8">8 years old</option>
-                                        <option value="9">9 years old</option>
-                                        <option value="10">10 years old</option>
-                                        <option value="11">11 years old</option>
-                                        <option value="12">12 years old</option>
-                                        <option value="13">13 years old</option>
-                                        <option value="14">14 years old</option>
-                                        <option value="15">15 years old</option>
-                                        <option value="16">16 years old</option>
-                                        <option value="17">17 years old</option>
-                                    </select>
+                                    <option value="1">1 years old</option>
+                                    <option value="2">2 years old</option>
+                                    <option value="3">3 years old</option>
+                                    <option value="4">4 years old</option>
+                                    <option value="5">5 years old</option>
+                                    <option value="6">6 years old</option>
+                                    <option value="7">7 years old</option>
+                                    <option value="8">8 years old</option>
+                                    <option value="9">9 years old</option>
+                                    <option value="10">10 years old</option>
+                                    <option value="11">11 years old</option>
+                                    <option value="12">12 years old</option>
+                                    <option value="13">13 years old</option>
+                                    <option value="14">14 years old</option>
+                                    <option value="15">15 years old</option>
+                                    <option value="16">16 years old</option>
+                                    <option value="17">17 years old</option>
+                                </select>
                             </div>
                         </div>
                     </form>
@@ -204,13 +245,21 @@
             </section>
         </div>
 
+        <section class="homes-guests available">
+            <h2 class="homes-guests__heading">Available hotels</h2>
+            <div class="homes-guests__wrapper available" id="wrapper available"></div>
+            <svg class="homes-guests__button-arrow4"></svg>
+        </section>
+
         <section class="homes-guests">
             <h2 class="homes-guests__heading">Homes guests loves</h2>
-            <div class="homes-guests__wrapper"></div>
+            <div class="homes-guests__wrapper" id="homes-guests-wrapper"></div>
             <svg class="homes-guests__button-arrow4"></svg>
         </section>
 
         <script type="module" src="src/lesson-11/main.js"></script>
         <script type="module" src="src/lesson-12/fetchRenderHomeGuests.js"></script>
+        <script type="module" src="src/lesson-13/hotelSearch.js"></script>
+
     </body>
 </html>

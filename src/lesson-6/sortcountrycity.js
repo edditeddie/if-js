@@ -159,7 +159,9 @@ const hotels = [
 export function sortCountry(arr) {
     const checkCountry = new Map();
     for (let i = 0; i < arr.length; i++) {
-        checkCountry.has(arr[i].country) ? checkCountry.get(arr[i].country).push(arr[i].city) : checkCountry.set(arr[i].country, [arr[i].city]);
+        checkCountry.has(arr[i].country)
+            ? checkCountry.get(arr[i].country).push(arr[i].city)
+            : checkCountry.set(arr[i].country, [arr[i].city]);
     }
     return Object.fromEntries(checkCountry);
 }
