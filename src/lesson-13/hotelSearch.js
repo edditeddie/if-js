@@ -1,6 +1,6 @@
 const searchHotel = document.getElementById('open-search-form');
 
-const parent = document.querySelector('.homes-guests__wrapper');
+const parent = document.getElementById('wrapper available');
 
 searchHotel.addEventListener('submit', (event) => fetchData(event));
 
@@ -16,10 +16,9 @@ async function fetchData(event) {
         <a class ="homes-guests__subtitle-link" href="#">${card.name}</a>
         <div class ="homes-guests__subtitle-caption">${card.city}, ${card.country}</div>
     </div>
-</div>`
-    );
+    </div>`);
     parent.innerHTML = ' ';
     parent.insertAdjacentHTML('afterbegin', cards);
 }
 
-fetchData();
+fetchData()

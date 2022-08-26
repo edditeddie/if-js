@@ -11,8 +11,7 @@ async function fetchData() {
         <a class ="homes-guests__subtitle-link" href="#">${card.name}</a>
         <div class ="homes-guests__subtitle-caption">${card.city}, ${card.country}</div>
     </div>
-</div>`
-    );
+</div>`).join('');
     parent.insertAdjacentHTML('afterbegin', cards);
 }
 
