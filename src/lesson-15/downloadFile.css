@@ -1,0 +1,38 @@
+.form-container {
+    padding: 30px 100px;
+}
+
+.form-wrapper {
+    margin: 20px 0;
+    height: 60px;
+}
+.form-label {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17em;
+    color: #3077C6;
+}
+.form-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17em;
+    color: #383838;
+}
+
+.signup-button {
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 0;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.form-button {
+    font-weight: 500;
+    font-size: 24px;
+    height: 60px;
+    width: 240px;
+    background: #3077c6;
+    color: #ffffff;
+    border-radius: 8px;
+}
