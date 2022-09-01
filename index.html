@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="src/lesson-11/styles/filter.css" />
         <link rel="stylesheet" href="src/lesson-10/styles/home-guests.css" />
         <link rel="stylesheet" href="styles/fonts.css" />
+        <link rel="stylesheet" href="src/lesson-15/downloadFile.css" />               <!--15 домашка на удаление-->
     </head>
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite">
@@ -248,18 +249,24 @@
         <section class="homes-guests available">
             <h2 class="homes-guests__heading">Available hotels</h2>
             <div class="homes-guests__wrapper available" id="wrapper available"></div>
-            <svg class="homes-guests__button-arrow4"></svg>
         </section>
 
         <section class="homes-guests">
             <h2 class="homes-guests__heading">Homes guests loves</h2>
             <div class="homes-guests__wrapper" id="homes-guests-wrapper"></div>
-            <svg class="homes-guests__button-arrow4"></svg>
         </section>
 
+        <section class="form">
+            <div class="form-container"> <h1 class="form-title">Choose file to submit</h1>
+                <form class="form-wrapper"> <label for="file" class="form-label"></label><br>
+                    <input type="file" name="file" accept="image/*" class="form-input signup-button" id="file"> <button class="form-button signup-button" type="submit">Upload File</button>
+                </form>
+            </div>
+        </section> <!--15 домашка на удаление-->
+
         <script type="module" src="src/lesson-11/main.js"></script>
-        <script type="module" src="src/lesson-12/fetchRenderHomeGuests.js"></script>
-        <script type="module" src="src/lesson-13/hotelSearch.js"></script>
+        <script type="module" src="src/lesson-14/RenderSessionStorage.js"></script>           <!--блок Homes guests loves sessionstorage-->
+        <script type="module" src="src/lesson-15/downloadFile.js"></script><!--15 домашка на удаление-->
 
     </body>
 </html>

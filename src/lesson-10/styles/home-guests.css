@@ -36,6 +36,11 @@
   margin: 0 4px 50px;
 }
 
+.homes-guests__image {
+  max-width: 295px;
+  height: 295px;
+}
+
 .homes-guests__subtitle-link{
   text-decoration: none;
   font-weight: 400;
@@ -53,27 +58,6 @@
   margin-top: 24px;
   margin-bottom: 0;
 }
-
-.homes-guests__button-arrow2 {
-  display: none;
-  position: absolute;
-  bottom: 54%;
-  left: 86%;
-  width: 36px;
-  height: 36px;
-  background: url("src/lesson-10/image/button-arrow-mobile.svg") 0 0;
-}
-
-.homes-guests__button-arrow4{
-  display: block;
-  position: absolute;
-  bottom: 60%;
-  left: 91%;
-  width: 48px;
-  height: 48px;
-  background: url("src/lesson-10/image/button-arrow.svg") 0 0;
-}
-
 
 @media only screen and (max-width: 1232px) {
   /* For desktop: */
@@ -304,15 +288,4 @@
     margin-top: 8px;
     width: 155px;
   }
-
-  .homes-guests__button-arrow2 {
-    display: block;
-    position: absolute;
-    bottom: 54%;
-    left: 86%;
-    width: 36px;
-    height: 36px;
-    background: url("src/lesson-10/image/button-arrow-mobile.svg") 0 0;
-  }
 }
-
